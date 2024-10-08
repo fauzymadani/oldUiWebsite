@@ -3,31 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <title>Fauzy's Website</title>
-    <link rel="stylesheet" href="https://unpkg.com/98.css" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="assets/win95.css">
-    
-
+    <!-- <link rel="stylesheet" href="https://unpkg.com/98.css" /> -->
+    <link rel="stylesheet" href="node_modules/98.css/dist/98.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/win95.css" />
   </head>
   <body>
     <div class="navbar window">
-        <div class="title-bar">
-            <div class="title-bar-text">Fauzy's Website</div>
-            <div class="window-body">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </div>
+      <div class="title-bar">
+        <div class="title-bar-text">Fauzy's Website</div>
+        <div class="window-body">
+          <a href="#"><button>Github</button></a>
+          <a href="index.html"><button>About</button></a>
+          <a href="fauzyterm.vecel.app"><button>Portofolio</button></a>
         </div>
+      </div>
     </div>
     <!-- begin skkiill -->
     <div class="container">
-        <div class="content-left" align="center">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0U4RFuEYKc9p6l2bscncVoswIofvRseJjhA&s" alt="">
+      <div class="content-left" align="center">
+        <div class="window" style="width: 300px">
+          <div class="title-bar">
+            <div class="title-bar-text" align="center">
+              <strong align="center">About</strong>
+            </div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="window-body">
+            <strong>About me</strong>
+            <p>
+              Hi,I'm Fauzy Madani. A Passionate web developer dedicated to
+              crafting innovative and user-friendly digital experiences.
+              Committed to continuous learning and leveraging the latest
+              technologies to deliver exceptional results.
+            </p>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0U4RFuEYKc9p6l2bscncVoswIofvRseJjhA&s"
+              alt=""
+            />
+          </div>
+          <footer><button>Ok</button> <button>Cancel</button></footer>
         </div>
+      </div>
     </div>
     <!-- end skilll -->
+    <div class="second-container" align="left">
+      <div class="window" style="width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">A Window With Stuff In It</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <p><strong>How was Your Mood Today?</strong></p>
+          <fieldset>
+            <legend>Today's mood</legend>
+            <div class="field-row">
+              <input id="radio13" type="radio" name="fieldset-example2" />
+              <label for="radio13">Freakin Good!</label>
+            </div>
+            <div class="field-row">
+              <input id="radio14" type="radio" name="fieldset-example2" />
+              <label for="radio14">Very Good</label>
+            </div>
+            <div class="field-row">
+              <input id="radio15" type="radio" name="fieldset-example2" />
+              <label for="radio15">Good</label>
+            </div>
+            <div class="field-row">
+              <input id="radio16" type="radio" name="fieldset-example2" />
+              <label for="radio16">Something Else</label>
+            </div>
+          </fieldset>
+          <div class="field-row" style="width: 300px">
+            <label for="range25">Mood Meter:</label>
+            <label for="range26">Low</label>
+            <input id="range26" type="range" min="1" max="11" value="5" />
+            <label for="range27">High</label>
+          </div>
+          <select class="select-option">
+            <option>5 - Incredible!</option>
+            <option>4 - Great!</option>
+            <option selected>3 - Pretty good</option>
+            <option>2 - Not so great</option>
+            <option>1 - Unfortunate</option>
+          </select>
+        </div>
+        <footer align="center" class="second-cont-footer">
+          <button>Ok</button> <button>Cancel</button>
+        </footer>
+      </div>
+    </div>
+
+    <div class="right-container" align="right">
+    <div class="win-container">
+      <div id="app"></div>
+      <script src="https://unpkg.com/webamp"></script>
+      <script>
+        const app = document.getElementById("app");
+        const webamp = new Webamp();
+        webamp.renderWhenReady(app);
+      </script>
+    </div>
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
   </body>
 </html>
