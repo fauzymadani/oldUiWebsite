@@ -6,6 +6,7 @@ body {
     padding: 0;
     background-size: cover;
     height: 100vh;
+    
 }
 
 .navbar a {
@@ -65,7 +66,7 @@ footer .second-cont-footer {
 .right-container {
     float: right;
     width: 200px;
-    margin-right: 60px;
+    margin-right: 50px;
     margin-top: 190px;
 }
 
@@ -73,3 +74,32 @@ footer .second-cont-footer {
 .container, .second-container, .right-container {
     min-height: 100%;
 }
+
+.section-1 {
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.section-2 {
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    body {
+      display: block; /* Mengubah layout menjadi blok pada layar kecil */
+    }
+  
+    .container, .second-container, .right-container {
+      display: block; /* Membuat kontainer bertumpuk ke bawah */
+      width: 100%;
+      margin-bottom: 20px; /* Beri sedikit jarak antar kontainer */
+    }
+  
+    .window {
+      width: 90%; /* Sesuaikan ukuran jendela agar lebih kecil di layar mobile */
+      margin: 0 auto; /* Agar elemen tetap di tengah */
+    }
+  }

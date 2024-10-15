@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fauzy's Website</title>
     <!-- <link rel="stylesheet" href="https://unpkg.com/98.css" /> -->
     <link rel="stylesheet" href="node_modules/98.css/dist/98.css" />
@@ -9,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="assets/win95.css" />
   </head>
   <body>
+    <section class="section-1">
     <div class="navbar window">
       <div class="title-bar">
         <div class="title-bar-text">Fauzy's Website</div>
@@ -108,10 +110,109 @@
       <script src="https://unpkg.com/webamp"></script>
       <script>
         const app = document.getElementById("app");
-        const webamp = new Webamp();
+        const webamp = new Webamp(
+          {
+        initialTracks: [
+          {
+            url: "./audio/song.mp3",  
+            duration: 240,  
+            name: "Nama Lagu"  
+          }
+        ]
+      }
+        );
         webamp.renderWhenReady(app);
       </script>
     </div>
+  </section>
+    <section class="section-2">
+      <div class="window" style="width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">A Window With Stuff In It</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <p>There's so much room for activities!</p>
+          <div class="sunken-panel" style="height: 120px; width: 240px;">
+            <table class="interactive">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Version</th>
+                  <th>Company</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MySQL ODBC 3.51 Driver</td>
+                  <td>3.51.11.00</td>
+                  <td>MySQL AB</td>
+                </tr>
+                <tr>
+                  <td>SQL Server</td>
+                  <td>3.70.06.23</td>
+                  <td>Microsoft Corporation</td>
+                </tr>
+                <tr>
+                  <td>SQL Server</td>
+                  <td>3.70.06.23</td>
+                  <td>Microsoft Corporation</td>
+                </tr>
+                <tr>
+                  <td>SQL Server</td>
+                  <td>3.70.06.23</td>
+                  <td>Microsoft Corporation</td>
+                </tr>
+                <tr>
+                  <td>SQL Server</td>
+                  <td>3.70.06.23</td>
+                  <td>Microsoft Corporation</td>
+                </tr>
+                <tr>
+                  <td>SQL Server</td>
+                  <td>3.70.06.23</td>
+                  <td>Microsoft Corporation</td>
+                </tr>
+                <tr>
+                  <td>SQL Server</td>
+                  <td>3.70.06.23</td>
+                  <td>Microsoft Corporation</td>
+                </tr>
+                <tr>
+                  <td>SQL Server</td>
+                  <td>3.70.06.23</td>
+                  <td>Microsoft Corporation</td>
+                </tr>
+                <tr>
+                  <td>SQL Server</td>
+                  <td>3.70.06.23</td>
+                  <td>Microsoft Corporation</td>
+                </tr>
+                <tr>
+                  <td>SQL Server</td>
+                  <td>3.70.06.23</td>
+                  <td>Microsoft Corporation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <script>
+            document.querySelectorAll('table.interactive').forEach(element => {
+              element.addEventListener('click', (event) => {
+                const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                if (row) {
+                  row.classList.toggle('highlighted');
+                }
+              })
+            });
+          </script>
+        </div>
+      </div>
+    </section>
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
   </body>
 </html>
